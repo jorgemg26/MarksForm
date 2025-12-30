@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Marks Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <script src="marksForm.js"></script>
+    </head>
+    <body>
+        <main class="app">
+            <section class="section">
+                <!-- the header -->
+                <header class="header">
+                    <!-- decorative icon -->
+                    <div class="icon" aria-hidden="true">📄</div>
+                    <div class="headerText">
+                        <h1 class="title">Notes Manager</h1>
+                        <p class="subTitle">JavaScript Practice</p>
+                    </div>
+                </header>
+                <!-- form and result -->
+                <div class="content">
+                    <form method="post" id="marksForm" class="grid" novalidate>         <!-- novalidate avoids the automatic message of the browser-->
+                        <!-- personal data -->
+                        <input type="text" id="name" placeholder="Name" required>
+                        <input type="text" id="surname1" placeholder="Surname1" required>
+                        <input type="text" id="surname2" placeholder="Surname2">
+                        <!-- marks -->
+                        <input type="number" id="mark1" placeholder="Mark1" min="0" max="10" required>
+                        <input type="number" id="mark2" placeholder="Mark2" min="0" max="10" required>
+                        <input type="number" id="mark3" placeholder="Mark3" min="0" max="10" required>
+                        <!-- buttons -->
+                        <div class="buttons">
+                            <input type="submit" value="Calculate marks">
+                            <input type="reset" value="Clean">
+                        </div>
+                    </form> 
+                    <!-- results -->
+                    <div class="result" aria-live="polite">
+                        <div id="line1"></div>
+                        <div id="line2"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
